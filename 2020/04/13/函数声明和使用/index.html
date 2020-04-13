@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Riko&#39;s blog</title>
+  <title>函数声明和使用 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Riko的前端自习室">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Riko&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="函数的声明：function 函数名(参数1，参数2...){     &#x2F;&#x2F;函数体代码     return 返回值; }">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数声明和使用">
+<meta property="og:url" content="http://yoursite.com/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="Riko的前端自习室">
+<meta property="og:description" content="函数的声明：function 函数名(参数1，参数2...){     &#x2F;&#x2F;函数体代码     return 返回值; }">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-13T08:48:34.000Z">
+<meta property="article:modified_time" content="2020-04-13T09:31:32.147Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -134,16 +136,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-函数声明和使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-函数声明和使用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">函数声明和使用</a>
+    <h1 class="article-title" itemprop="name">
+      函数声明和使用
     </h1>
   
 
@@ -159,430 +159,41 @@
         <h2 id="函数的声明："><a href="#函数的声明：" class="headerlink" title="函数的声明："></a>函数的声明：</h2><pre><code>function 函数名(参数1，参数2...){
     //函数体代码
     return 返回值;
-}</code></pre>
-        
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/%E9%97%AD%E5%8C%85/">闭包</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/13/%E9%97%AD%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2020-04-12T17:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。"><a href="#由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。" class="headerlink" title="由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。"></a>由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。</h2><font size = '4'>
-举个例子：  
-
-<pre><code>var innerFn = null;  
-function father() {  
-    var n = 10;
-    function son() {
-        n++;
-        console.log(n);
-    }
-    innerFn = son;
-}
-father();
-innerFn();</code></pre>
-        
-          <a class="article-more-a" href="/2020/04/13/%E9%97%AD%E5%8C%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/%E9%97%AD%E5%8C%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/">跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/12/%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2020-04-11T16:49:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size = '4'>
-
-<p><strong>什么是跨域？</strong>  </p>
-<p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
-<p><strong>跨域这个行为发生在哪里？</strong>  </p>
-<ol>
-<li>即使跨域，请求也可以发出。</li>
-<li>服务器端也可以接收，正常处理请求并返回数据。</li>
-<li>浏览器也能接收到服务器发出的数据。</li>
-<li>浏览器接收之后，当前页面的域和请求的域不同，所以判定跨域。</li>
+}</code></pre><a id="more"></a>
+<h2 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h2><ol>
+<li>直接调用：函数名（参数1的值，参数2的值…）;</li>
+<li>事件调用：在HTML标签中，使用事件名 = ‘函数名()’</li>
 </ol>
-        
-          <a class="article-more-a" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/#more">more >></a>
-        
+<hr>
+<p><strong>Tips:</strong> </p>
+<p>1.函数名必须符合小驼峰法则，首字母小写，之后每个单词首字母大写。<br>2.函数名后面括号中可以有参数，也可以无参数，分别为有参函数和无参函数。<br>3.声明函数时的参数列表，称为形参列表，形式参数(变量的名字)。调用函数时的参数列表，称为实参列表，实际参数（变量赋值）。<br>4.函数的形参列表个数与实参列表个数，并没有实际关联关系。函数参数的个数，取决于实参。如果实参列表个数&lt;形参列表，则未赋值的形参，将为undefined.<br>5. 函数可以有返回值，使用return返回结果。调用函数时，可以使用一个变量接收函数的返回结果；如果函数没有返回值，则接收的返回值为undefined.<br><br></p>
+<h2 id="匿名函数的声明和使用"><a href="#匿名函数的声明和使用" class="headerlink" title="匿名函数的声明和使用"></a>匿名函数的声明和使用</h2><p>1.声明一个匿名函数，直接赋值给一个事件。<br>    <code>window.onload = function(){  
+        alert(111);
+    }</code><br>2.使用匿名函数表达式，将匿名函数，赋值给一个变量。<br><em>声明：</em> <code>var func = function(){};</code><br><em>调用：</em>    <code>func()</code><br><strong>注意：使用匿名函数表达式时，函数的调用语句必须放在函数声明语句之后</strong></p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Cookie-Session" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/11/Cookie-Session/">Cookie与Session</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/11/Cookie-Session/" class="archive-article-date">
-  	<time datetime="2020-04-11T15:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size = '4'>
-关于数据存储我们需要知道用JS的变量来存储数据，页面关闭，数据会消失。  
-
-<ul>
-<li><strong>那么如何保持登录状态呢？</strong>  </li>
-</ul>
-<p>按照HTTP协议，上下文无关协议，是做不到的，因此在前端页面中，Cookie可以持久化存储数据，一旦登录成功，就会保存数据。</p>
-        
-          <a class="article-more-a" href="/2020/04/11/Cookie-Session/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据存储//" class="article-tag-list-link color5">数据存储</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/11/Cookie-Session/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-GET-POST" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/11/GET-POST/">GET与POST的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/11/GET-POST/" class="archive-article-date">
-  	<time datetime="2020-04-11T08:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基于什么前提讨论？"><a href="#基于什么前提讨论？" class="headerlink" title="基于什么前提讨论？"></a>基于什么前提讨论？</h2><font size = '4'>
-1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。<br> 
-2.基于RFC规范：  
-
-<blockquote>
-<p>征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2020/04/11/GET-POST/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/11/GET-POST/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript-加载时间线" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">JavaScript 加载时间线</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/" class="archive-article-date">
-  	<time datetime="2020-04-10T11:11:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><font size = '4'>创建Document对象，解析到Web页面，解析HTML元素和文本内容后,添加Element对象和Text节点到文档中，这个阶段document.readyState = ‘loading’。<br></li>
-<li>遇到link标签链接外部css样式时，创建线程加载，继续解析。</li>
-<li>遇到script外部链接js,并且没有设置async、defer，浏览器会继续加载，导致阻塞。等待js加载完成并执行该脚本，继续解析文档。
-        
-          <a class="article-more-a" href="/2020/04/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/#more">more >></a>
-        
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -602,16 +213,75 @@ innerFn();</code></pre>
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/13/%E9%97%AD%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">闭包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -631,8 +301,14 @@ innerFn();</code></pre>
 
 
 
+  
+  
+  
 
   
+
+  
+
   
 
 
@@ -655,8 +331,8 @@ innerFn();</code></pre>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
