@@ -132,30 +132,35 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-DOM优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/15/DOM%E4%BC%98%E5%8C%96/">DOM优化</a>
+      <a class="article-title" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/">跨域</a>
     </h1>
   
 
         
-        <a href="/2020/04/15/DOM%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2020-04-14T16:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-15</time>
+        <a href="/2019/11/12/%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
+  	<time datetime="2019-11-11T16:49:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="DOM操作成本"><a href="#DOM操作成本" class="headerlink" title="DOM操作成本"></a>DOM操作成本</h2><font size = '4'>
-DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API。HTML(Hyper Text Markup Language)是一种标记语言，HTML 在DOM的模型标准中被视为对象，DOM只提供编程接口，却无法实际操作HTML里面的内容。前端可以用脚本语言(JavaScript) 通过DOM去操作HTML内容。实质上还存在CSSOM: CSS Object Model，浏览器将CSS代码解析成树形的数据结构，与DOM是两个独立的数据结构。
+        <font size = '4'>
+
+<p><strong>什么是跨域？</strong>  </p>
+<p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
+<blockquote>
+<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。<br>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？<br>很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。<br>由此可见，”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</p>
+</blockquote>
         
-          <a class="article-more-a" href="/2020/04/15/DOM%E4%BC%98%E5%8C%96/#more">more >></a>
+          <a class="article-more-a" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/#more">more >></a>
         
       
 
@@ -170,7 +175,7 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
         		</li>
       		
 		</ul>
@@ -179,7 +184,7 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/15/DOM%E4%BC%98%E5%8C%96/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
         </p>
       
 
@@ -216,13 +221,13 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/">两栏布局</a>
+      <a class="article-title" href="/2019/10/12/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/">两栏布局</a>
     </h1>
   
 
         
-        <a href="/2020/04/14/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/" class="archive-article-date">
-  	<time datetime="2020-04-14T14:52:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
+        <a href="/2019/10/12/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/" class="archive-article-date">
+  	<time datetime="2019-10-12T14:52:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-12</time>
 </a>
         
       </header>
@@ -238,7 +243,7 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
     &lt;div class=&quot;right&quot;&gt;宽度自适应&lt;/div&gt;
 &lt;/div&gt;</code></pre>
         
-          <a class="article-more-a" href="/2020/04/14/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/#more">more >></a>
+          <a class="article-more-a" href="/2019/10/12/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/#more">more >></a>
         
       
 
@@ -262,337 +267,7 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">CSS水平垂直居中</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
-  	<time datetime="2020-04-14T14:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size = '4'>
-以下为CSS实现元水平垂直居中的几种方法:   
-
-<p>HTML公共代码：</p>
-<pre><code>&lt;div class=&quot;wrapper&quot;&gt;
-   &lt;div class=&quot;box size&quot;&gt;哈哈哈&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-        
-          <a class="article-more-a" href="/2020/04/14/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-border-radius" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/border-radius/">border-radius</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/border-radius/" class="archive-article-date">
-  	<time datetime="2020-04-14T11:31:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-通过border-radius我们能够很轻易画出一个圆：  
-HTML:  
-
-<pre><code>&lt;div class = &apos;demo&apos;&gt;&lt;/div&gt;</code></pre><p>CSS:</p>
-<pre><code>.demo{
-    width:100px;
-    height:100px;
-    background-color:red;
-    border-radius:50px;
-}</code></pre></font>
-        
-          <a class="article-more-a" href="/2020/04/14/border-radius/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/border-radius/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-filter函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/14/filter%E5%87%BD%E6%95%B0/">filter函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/14/filter%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-04-13T17:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size = '4'>
-
-<blockquote>
-<p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。</p>
-</blockquote>
-<p>注意： filter() 不会对空数组进行检测,不会改变原始数组。 </p>
-        
-          <a class="article-more-a" href="/2020/04/14/filter%E5%87%BD%E6%95%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/14/filter%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-函数内部属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/">函数内部属性</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/" class="archive-article-date">
-  	<time datetime="2020-04-13T09:39:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h2><font size = '4'>
-
-<ul>
-<li>作用：用于储存调用函数时所有实参。当调用函数并用实参赋值时，实际上参数列表已经保存到arguments数组中，可以在arguments[n]的形式调用，n从0开始。</li>
-<li>arguments数组的个数取决于实参列表，与形参无关。但是。一旦第n个位置的形参、实参、arguments都存在时，形参将与arguments绑定，同步变化。</li>
-<li>argyments.callee是arguments的重要属性，表示arguments所在函数的引用地址。返回正被执行的 Function 对象，也就是所指定的 Function 对象的正文，这有利于匿名函数的递归或者保证函数的封装性。
-        
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/12/%E4%B8%A4%E6%A0%8F%E5%B8%83%E5%B1%80/">展开全文 >></a>
         </p>
       
 
@@ -629,13 +304,13 @@ HTML:
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">函数声明和使用</a>
+      <a class="article-title" href="/2019/09/15/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">函数声明和使用</a>
     </h1>
   
 
         
-        <a href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-04-13T08:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
+        <a href="/2019/09/15/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2019-09-15T08:48:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
 </a>
         
       </header>
@@ -647,7 +322,7 @@ HTML:
     return 返回值;
 }</code></pre>
         
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/#more">more >></a>
+          <a class="article-more-a" href="/2019/09/15/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/#more">more >></a>
         
       
 
@@ -671,7 +346,169 @@ HTML:
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/15/%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E%E5%92%8C%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-函数内部属性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/20/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/">函数内部属性</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/20/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/" class="archive-article-date">
+  	<time datetime="2019-08-20T09:39:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h2><font size = '4'>
+
+<ul>
+<li>作用：用于储存调用函数时所有实参。当调用函数并用实参赋值时，实际上参数列表已经保存到arguments数组中，可以在arguments[n]的形式调用，n从0开始。</li>
+<li>arguments数组的个数取决于实参列表，与形参无关。但是。一旦第n个位置的形参、实参、arguments都存在时，形参将与arguments绑定，同步变化。</li>
+<li>argyments.callee是arguments的重要属性，表示arguments所在函数的引用地址。返回正被执行的 Function 对象，也就是所指定的 Function 对象的正文，这有利于匿名函数的递归或者保证函数的封装性。
+        
+          <a class="article-more-a" href="/2019/08/20/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/20/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-filter函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/05/filter%E5%87%BD%E6%95%B0/">filter函数</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/05/filter%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2019-07-04T17:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font size = '4'>
+
+<blockquote>
+<p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。</p>
+</blockquote>
+<p>注意： filter() 不会对空数组进行检测,不会改变原始数组。 </p>
+        
+          <a class="article-more-a" href="/2019/07/05/filter%E5%87%BD%E6%95%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/05/filter%E5%87%BD%E6%95%B0/">展开全文 >></a>
         </p>
       
 
@@ -708,13 +545,13 @@ HTML:
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/13/%E9%97%AD%E5%8C%85/">闭包</a>
+      <a class="article-title" href="/2019/05/16/%E9%97%AD%E5%8C%85/">闭包</a>
     </h1>
   
 
         
-        <a href="/2020/04/13/%E9%97%AD%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2020-04-12T17:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
+        <a href="/2019/05/16/%E9%97%AD%E5%8C%85/" class="archive-article-date">
+  	<time datetime="2019-05-15T17:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
 </a>
         
       </header>
@@ -736,7 +573,7 @@ function father() {
 father();
 innerFn();</code></pre>
         
-          <a class="article-more-a" href="/2020/04/13/%E9%97%AD%E5%8C%85/#more">more >></a>
+          <a class="article-more-a" href="/2019/05/16/%E9%97%AD%E5%8C%85/#more">more >></a>
         
       
 
@@ -760,7 +597,7 @@ innerFn();</code></pre>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/13/%E9%97%AD%E5%8C%85/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/05/16/%E9%97%AD%E5%8C%85/">展开全文 >></a>
         </p>
       
 
@@ -790,35 +627,30 @@ innerFn();</code></pre>
 
 
   
-    <article id="post-跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-DOM优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/">跨域</a>
+      <a class="article-title" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/">DOM优化</a>
     </h1>
   
 
         
-        <a href="/2020/04/12/%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2020-04-11T16:49:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
+        <a href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/" class="archive-article-date">
+  	<time datetime="2019-04-14T16:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font size = '4'>
-
-<p><strong>什么是跨域？</strong>  </p>
-<p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
-<blockquote>
-<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。<br>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？<br>很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。<br>由此可见，”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</p>
-</blockquote>
+        <h2 id="DOM操作成本"><a href="#DOM操作成本" class="headerlink" title="DOM操作成本"></a>DOM操作成本</h2><font size = '4'>
+DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API。HTML(Hyper Text Markup Language)是一种标记语言，HTML 在DOM的模型标准中被视为对象，DOM只提供编程接口，却无法实际操作HTML里面的内容。前端可以用脚本语言(JavaScript) 通过DOM去操作HTML内容。实质上还存在CSSOM: CSS Object Model，浏览器将CSS代码解析成树形的数据结构，与DOM是两个独立的数据结构。
         
-          <a class="article-more-a" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/#more">more >></a>
+          <a class="article-more-a" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/#more">more >></a>
         
       
 
@@ -833,7 +665,7 @@ innerFn();</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -842,7 +674,7 @@ innerFn();</code></pre>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/12/%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/">展开全文 >></a>
         </p>
       
 
@@ -879,13 +711,13 @@ innerFn();</code></pre>
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/11/Cookie-Session/">Cookie与Session</a>
+      <a class="article-title" href="/2019/04/11/Cookie-Session/">Cookie与Session</a>
     </h1>
   
 
         
-        <a href="/2020/04/11/Cookie-Session/" class="archive-article-date">
-  	<time datetime="2020-04-11T15:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
+        <a href="/2019/04/11/Cookie-Session/" class="archive-article-date">
+  	<time datetime="2019-04-11T15:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
@@ -900,7 +732,7 @@ innerFn();</code></pre>
 </ul>
 <p>按照HTTP协议，上下文无关协议，是做不到的，因此在前端页面中，Cookie可以持久化存储数据，一旦登录成功，就会保存数据。</p>
         
-          <a class="article-more-a" href="/2020/04/11/Cookie-Session/#more">more >></a>
+          <a class="article-more-a" href="/2019/04/11/Cookie-Session/#more">more >></a>
         
       
 
@@ -924,7 +756,168 @@ innerFn();</code></pre>
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/11/Cookie-Session/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/04/11/Cookie-Session/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">CSS水平垂直居中</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
+  	<time datetime="2019-03-06T14:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font size = '4'>
+以下为CSS实现元水平垂直居中的几种方法:   
+
+<p>HTML公共代码：</p>
+<pre><code>&lt;div class=&quot;wrapper&quot;&gt;
+   &lt;div class=&quot;box size&quot;&gt;哈哈哈&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        
+          <a class="article-more-a" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScript-加载时间线" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">JavaScript 加载时间线</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/" class="archive-article-date">
+  	<time datetime="2019-02-10T11:11:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><font size = '4'>创建Document对象，解析到Web页面，解析HTML元素和文本内容后,添加Element对象和Text节点到文档中，这个阶段document.readyState = ‘loading’。<br></li>
+<li>遇到link标签链接外部css样式时，创建线程加载，继续解析。</li>
+<li>遇到script外部链接js,并且没有设置async、defer，浏览器会继续加载，导致阻塞。等待js加载完成并执行该脚本，继续解析文档。
+        
+          <a class="article-more-a" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">展开全文 >></a>
         </p>
       
 
