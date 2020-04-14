@@ -6,23 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>filter函数 | Riko&#39;s blog</title>
+  <title>border-radius | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。  注意： filter() 不会对空数组进行检测,不会改变原始数组。">
+  <meta name="description" content="通过border-radius我们能够很轻易画出一个圆：   HTML:    &lt;div class &#x3D; &amp;apos;demo&amp;apos;&gt;&lt;&#x2F;div&gt;CSS: .demo{     width:100px;     height:100px;     background-color:red;     border-radius:50px; }">
 <meta property="og:type" content="article">
-<meta property="og:title" content="filter函数">
-<meta property="og:url" content="http://yoursite.com/2020/04/14/filter%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="border-radius">
+<meta property="og:url" content="http://yoursite.com/2020/04/14/border-radius/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。  注意： filter() 不会对空数组进行检测,不会改变原始数组。">
+<meta property="og:description" content="通过border-radius我们能够很轻易画出一个圆：   HTML:    &lt;div class &#x3D; &amp;apos;demo&amp;apos;&gt;&lt;&#x2F;div&gt;CSS: .demo{     width:100px;     height:100px;     background-color:red;     border-radius:50px; }">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-13T17:54:15.000Z">
-<meta property="article:modified_time" content="2020-04-13T18:14:30.387Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/2.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/3.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/4.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/5.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/6.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/7.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/14/border-radius/8.png">
+<meta property="article:published_time" content="2020-04-14T11:31:51.000Z">
+<meta property="article:modified_time" content="2020-04-14T12:20:49.306Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
 <meta property="article:tag" content="CSS">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/14/border-radius/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Riko&#39;s blog" type="application/atom+xml">
   
@@ -136,61 +145,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-filter函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-border-radius" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      filter函数
+      border-radius
     </h1>
   
 
         
-        <a href="/2020/04/14/filter%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-04-13T17:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
+        <a href="/2020/04/14/border-radius/" class="archive-article-date">
+  	<time datetime="2020-04-14T11:31:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font size = '4'>
+        <font size="4">
+通过border-radius我们能够很轻易画出一个圆：  
+HTML:  
 
-<blockquote>
-<p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。</p>
-</blockquote>
-<p>注意： filter() 不会对空数组进行检测,不会改变原始数组。 </p>
-<a id="more"></a> 
-<p>例如，在一个Array中，删掉偶数，只保留奇数，可以这么写:</p>
-<pre><code>var arr = [1, 2, 4, 5, 6, 9, 10, 15];
-var r = arr.filter(function (x) {
-    return x % 2 !== 0;
-});
-r; // [1, 5, 9, 15]</code></pre><p>把一个Array中的空字符串删掉，可以这么写：</p>
-<pre><code>var arr = [&apos;A&apos;, &apos;&apos;, &apos;B&apos;, null, undefined, &apos;C&apos;, &apos;  &apos;];
-var r = arr.filter(function (s) {
-     return s &amp;&amp; s.trim(); // 注意：IE9以下的版本没有trim()方法
- });
-arr; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</code></pre><h4>回调函数</h4>
-
-<blockquote>
-<p>filter()接收的回调函数，其实可以有多个参数。通常我们仅使用第一个参数，表示Array的某个元素。回调函数还可以接收另外两个参数，表示元素的位置和数组本身：</p>
-</blockquote>
-<pre><code>var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];
-var r = arr.filter(function (element, index, self) {
-    console.log(element); // 依次打印&apos;A&apos;, &apos;B&apos;, &apos;C&apos;
-    console.log(index); // 依次打印0, 1, 2
-    console.log(self); // self就是变量arr
-    return true;
-});</code></pre><p>Array去重：</p>
-<pre><code>var arr = [&apos;11&apos;,&apos;22&apos;,&apos;number12&apos;,&apos;apple&apos;,&apos;apple&apos;,&apos;11&apos;],
-     a;
-a = arr.filter(function(element,index,self){
-    return self.indexOf(element) === index;
-});
-console.log(a.toString());</code></pre>
+<pre><code>&lt;div class = &apos;demo&apos;&gt;&lt;/div&gt;</code></pre><p>CSS:</p>
+<pre><code>.demo{
+    width:100px;
+    height:100px;
+    background-color:red;
+    border-radius:50px;
+}</code></pre><a id="more"></a>
+<p>结果:</p>
+<p><img src="/2020/04/14/border-radius/1.png" alt><br>虽然我们只是写了<code>border-radius:50px;</code>但对于浏览器而言，它认为左上角，右上角，右下角，左下角四个值都是50px。<br>需要注意的是<font color="red">我们习惯说，左上，右上，但是这个属性表示的时候先说明上下，再说左右，也是就是 border-top-left-radius。</font></p>
+<pre><code>border-top-left-radius: 50px;
+border-top-right-radius: 50px; 
+border-bottom-right-radius: 50px; 
+border-bottom-left-radius: 50px;</code></pre><p>从上面四个属性可以看到是圆，由四部分组成，如果修改一下参数：<br>CSS:</p>
+<pre><code>.demo {
+    width: 100px; height: 100px;
+    background-color: #f00; 
+    border-radius: 50px 0 0 0;
+}</code></pre><p>结果：<br><img src="/2020/04/14/border-radius/2.png" alt><br>相当于<code>border-top-left-radius: 50px</code>,用这张图可以很好解释了：<br><img src="/2020/04/14/border-radius/3.png" alt><br>通过这张图能说明白我们看到的这个圆角，其实是：以左上角为起点，以水平50px，垂直 50px 的点为圆心，50px 为半径画的圆。与原本 div 的左上角的重叠部分。就是我们看到的圆角。<font color="red">我们的圆不是直接画出来的，不是一个圆心，是四个圆心画出的四个圆与原来的 div 对应方向重叠形成的圆。</font></p>
+<p>接下来探究一下，我们的属性能不能为负值？最大值又是多少？分别是什么含义？<br>1.能为负值么？<br>我们设置成负值，看一下。  <code>border-radius: -10px;</code>控制台会报错。<br>说明值是无效的。我们要根据数值进行画圆。但是圆的半径是没有负值的。 就算是可以为负值那就画到原来div 的外侧了没有实际意义。所以不会有负值。<br>2.最大值是多少？<br>按照我们上面的分析，当我们设置的半径越大，圆也会变化，是不是意味着圆角可以无限大呢？假设宽高为一百像素的元素<br>50px(50%)：<br><code>border-top-left-radius: 50px;</code><br>结果：<br><img src="/2020/04/14/border-radius/4.png" alt>  </p>
+<p>100px(100%):<br><code>border-top-left-radius: 100px;</code><br>结果：<br><img src="/2020/04/14/border-radius/5.png" alt>  </p>
+<p>100px(&gt;100%):<br><code>border-top-left-radius: 150px;</code><br>结果：<br><img src="/2020/04/14/border-radius/6.png" alt><br>发现没有变，这说明：圆的半径最大为 div 宽高的的一倍。<br>那么长方形会如何？  </p>
+<pre><code>.demo {
+    width: 200px; height: 100px;
+    background-color: #f00;
+    border-top-left-radius: 200px;
+}</code></pre><p>这是一个宽 200px 高 100px 的长方形。我们圆角的半径 200px，是宽的一倍， 是高的两倍。根据上面我们的分析，应该是一个宽 200 高 100 的椭圆。结果：<br><img src="/2020/04/14/border-radius/7.png" alt><br>与预期不一样，需要科普一个点：<code>Border-top-left-raidus: x y;</code>我们可以分别设置 x 偏移和 y 偏移。<br>当使用一个值的时候，宽和高一致，当任何一个值（高和宽）超过宽高的最小值。宽高默认选择最短的值，也就是都选小值。因为 200 不能又表示<br>200，又表示 100 只能 100 100。<br>当使用两个值的时候，情况有些不一样了：  </p>
+<pre><code>.demo {
+    width: 100px; height: 100px;
+    background-color: #f00;
+    border-top-left-radius: 2000px 100px;
+}</code></pre><p><img src="/2020/04/14/border-radius/8.png" alt><br><font color="red">当分开写时，最大值超过宽高最大值，会按照，宽高最大值等比缩放。</font>  </p>
+</font>
       
 
       
@@ -225,7 +235,7 @@ console.log(a.toString());</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
         		</li>
       		
 		</ul>
@@ -280,7 +290,7 @@ console.log(a.toString());</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/14/filter%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/14/border-radius/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -294,18 +304,9 @@ console.log(a.toString());</code></pre>
   
 <nav id="article-nav">
   
-    <a href="/2020/04/14/border-radius/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          border-radius
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/13/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">函数内部属性</div>
+    <a href="/2020/04/14/filter%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">filter函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
