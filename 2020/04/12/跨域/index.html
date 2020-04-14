@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>跨域 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是跨域？   页面本身：有协议（http&#x2F;https）、域名、端口号（http:80;https:443）协议、域名、端口号，任意一个不一致就是跨域。   跨域这个行为发生在哪里？    即使跨域，请求也可以发出。 服务器端也可以接收，正常处理请求并返回数据。 浏览器也能接收到服务器发出的数据。 浏览器接收之后，当前页面的域和请求的域不同，所以判定跨域。">
+  <meta name="description" content="什么是跨域？   页面本身：有协议（http&#x2F;https）、域名、端口号（http:80;https:443）协议、域名、端口号，任意一个不一致就是跨域。    同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？很显然，如果 Cookie 包含隐私（比如存">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跨域">
 <meta property="og:url" content="http://yoursite.com/2020/04/12/%E8%B7%A8%E5%9F%9F/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="什么是跨域？   页面本身：有协议（http&#x2F;https）、域名、端口号（http:80;https:443）协议、域名、端口号，任意一个不一致就是跨域。   跨域这个行为发生在哪里？    即使跨域，请求也可以发出。 服务器端也可以接收，正常处理请求并返回数据。 浏览器也能接收到服务器发出的数据。 浏览器接收之后，当前页面的域和请求的域不同，所以判定跨域。">
+<meta property="og:description" content="什么是跨域？   页面本身：有协议（http&#x2F;https）、域名、端口号（http:80;https:443）协议、域名、端口号，任意一个不一致就是跨域。    同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？很显然，如果 Cookie 包含隐私（比如存">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-11T16:49:28.000Z">
-<meta property="article:modified_time" content="2020-04-11T17:56:47.357Z">
+<meta property="article:modified_time" content="2020-04-14T10:13:08.226Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -160,6 +160,11 @@
 
 <p><strong>什么是跨域？</strong>  </p>
 <p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
+<blockquote>
+<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。<br>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？<br>很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。<br>由此可见，”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</p>
+</blockquote>
+<a id="more"></a>
+
 <p><strong>跨域这个行为发生在哪里？</strong>  </p>
 <ol>
 <li>即使跨域，请求也可以发出。</li>
@@ -167,8 +172,6 @@
 <li>浏览器也能接收到服务器发出的数据。</li>
 <li>浏览器接收之后，当前页面的域和请求的域不同，所以判定跨域。</li>
 </ol>
-<a id="more"></a>
-
 <p><strong>哪些是资源？</strong> </p>
 <p>（1）js文件，被允许跨域请求。<br>（2）css文件，jpg、png等。具有src属性的资源都可以被跨域请求的，href属性资源大部分可以被跨域请求。</p>
 <p><strong>哪些资源算跨域请求的资源？</strong></p>
@@ -207,15 +210,57 @@
 </li>
 </ul>
 <hr>
-<font size = '4'>
-JSONP发送时。会带上一个参数callback，返回的结果不是json,而是callback的名+（ +json+ ;  
-在JSONP里，Jquery会先判断是否同源；如果同源，设置GET就是GET，设置POST就是POST；如果不同源，无论设置什么，都是POST。  
+<h2 id="一、代理跨域"><a href="#一、代理跨域" class="headerlink" title="一、代理跨域"></a>一、代理跨域</h2><p><strong>举例1：</strong>有一个项目myweb，myweb的前端有一个接口是去访问一个非myweb的服务器。非myweb服务器是第三方服务器，不能去对第三方服务器做改动。<br><strong>举例2：</strong>项目是个微服务架构的。那你的前端页面可能就需要去很多个服务器上访问数据。  </p>
+<p><strong>原理：</strong>跨域请求报错归根结底是浏览器禁止使用XHR（XMLHttpRequest）对象向不同源的服务器地址发起HTTP请求。如果是服务器跨域向多个不同的服务器发送请求就不会有跨域问题存在。因此，我们可以让浏览器只向一个服务器方式请求，让这个服务器代替浏览器去不同的服务器上请求资源再返回给浏览器。这个服务器就是代理服务器了。</p>
+<h2 id="二、CORS"><a href="#二、CORS" class="headerlink" title="二、CORS"></a>二、CORS</h2><p><strong>举例：</strong>前后端分离的开发模式下，在本地进行接口联调时：在本地开发时，mock了一些假数据来帮助自己本地开发。实现在本地和后端同学进行联调。此时，后端rd的接口地址和你发生了跨域问题。这阻止了联调，只能继续使用mock的假数据。  </p>
+<p><strong>解决方案：</strong>整个CORS通信过程，都是浏览器自动完成，不需要用户参与。对于开发者来说，CORS通信与同源的AJAX通信没有差别，代码完全一样。浏览器一旦发现AJAX请求跨源，就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。因此，实现CORS通信的关键是服务器。只要服务器实现了CORS接口，就可以跨源通信。服务器要给接口的响应头设置：Access-Control-Allow-Origin：＊</p>
+<h2 id="三、JSONP"><a href="#三、JSONP" class="headerlink" title="三、JSONP"></a>三、JSONP</h2><p><strong>举例：</strong>跨域发送get请求。<br>jsonp解决跨域问题的本质：<br><code>&lt;script&gt;</code> 标签可以请求不同域名下的资源，即 <code>&lt;script&gt;</code> 请求不受浏览器同源策略影响。<br>首先给body动态添加一个 <code>&lt;script&gt;</code></p>
+<pre><code>var script = document.createElement(&apos;script&apos;);
+  script.setAttribute(&quot;type&quot;,&quot;text/javascript&quot;);
+  script.src = &apos;http://example.com/ip?callback=foo&apos;;
+  document.body.appendChild(script);
 
+  function foo(data) {
+    console.log(&apos;Your public IP address is: &apos; + data.ip);
+  };</code></pre><p>上面的script会向 <a href="http://example.com/" target="_blank" rel="noopener">http://example.com/</a> 服务器发送请求，这个请求的url后面带了个callback参数，是用来告诉服务器回调方法的方法名的。因为服务器收到请求后，会把相应数据写进foo的参数位置，也就是说服务器会返回的脚本如下:</p>
+<pre><code>foo({
+      &quot;ip&quot;: &quot;8.8.8.8&quot;
+   });</code></pre><p>这样浏览器通过<code>&lt;script&gt;</code>下载的资源就是上面的脚本了，<code>&lt;script&gt;</code>下载完成就会立即执行，也就是说<a href="http://example.com/ip?callback=foo这个请求返回后就会立即执行上面的脚本代码，而这个脚本代码就是调用回调方法和拿到json数据了。" target="_blank" rel="noopener">http://example.com/ip?callback=foo这个请求返回后就会立即执行上面的脚本代码，而这个脚本代码就是调用回调方法和拿到json数据了。</a><br>在JSONP里，Jquery会先判断是否同源；如果同源，设置GET就是GET，设置POST就是POST；如果不同源，无论设置什么，都是POST。  </p>
 <ul>
 <li>script标签，有src属性，所以可以发送网络请求。</li>
 <li>script标签虽然可以引用其他域资源，浏览器不限制，但会执行js代码。</li>
 </ul>
-<p><strong>JSONP原理</strong><br>前端：<br>&emsp;&emsp;（1）判断请求页面是否同源，如果同源则发送正常的AJAX,无关跨域。<br>&emsp;&emsp;（2）不同源，生成一个script标签，带有随机callback名字，创建同名方法。<br>&emsp;&emsp;（3）设置script标签的src,设置为要请求的接口。<br>&emsp;&emsp;（4）将callback作为参数拼接。<br>后端：<br>&emsp;&emsp;（1）后端接收请求，准备要返回的数据。<br>&emsp;&emsp;（2）后端拼接数据，将要返回的数据用callback的值和括号包裹，举例要返回<code>{&#39;a&#39;:1,&#39;b&#39;:2}</code>,而<code>callback = riko123</code>,则拼接<code>riko123({&#39;a&#39;:1,&#39;b&#39;:2});</code><br>&emsp;&emsp;（3）将内容返回。<br>浏览器收到内容，会当js代码执行，从而执行<code>riko123</code>的方法。</p>
+<p><strong>JSONP原理</strong><br>前端：<br>&emsp;&emsp;（1）判断请求页面是否同源，如果同源则发送正常的AJAX,无关跨域。<br>&emsp;&emsp;（2）不同源，生成一个script标签，带有随机callback名字，创建同名方法。<br>&emsp;&emsp;（3）设置script标签的src,设置为要请求的接口。<br>&emsp;&emsp;（4）将callback作为参数拼接。<br>后端：<br>&emsp;&emsp;（1）后端接收请求，准备要返回的数据。<br>&emsp;&emsp;（2）后端拼接数据，将要返回的数据用callback的值和括号包裹，举例要返回<code>{&#39;a&#39;:1,&#39;b&#39;:2}</code>,而<code>callback = riko123</code>,则拼接<code>riko123({&#39;a&#39;:1,&#39;b&#39;:2});</code><br>&emsp;&emsp;（3）将内容返回。浏览器收到内容，会当js代码执行，从而执行<code>riko123</code>的方法。</p>
+<h2 id="四、document-domain跨域"><a href="#四、document-domain跨域" class="headerlink" title="四、document.domain跨域"></a>四、document.domain跨域</h2><p><strong>举例1：</strong> 在<code>http://www.baidu.cn/a.html</code>页面里使用<code>&lt;ifame&gt;</code>标签调用另一个<code>http://badiu.cn/b.html</code>页面。这时候想在a页面里获取b页面里的dom，然后进行操作。我们会发现不能获得b的dom。<code>document.getElementById(&quot;myIFrame&quot;).contentWindow.document</code>或<code>window.parent.document.body</code>因为两个窗口不同源而报错。<br><strong>解决方案：</strong>需要在a页面里和b页面里把<code>document.domain</code>设置成相同的值就可以在两个页面里操作Dom了。</p>
+<p><strong>举例2：</strong>在<code>http://www.baidu.cn/a.html</code>页面里写入了<code>document.cookie = &quot;test1=hello&quot;</code>;在<code>http://baidu.cn/b.html</code>页面是拿不到这个cookie的。<br><strong>解决方案：</strong>Cookie 是服务器写入浏览器的一小段信息，只有同源的网页才能共享。但是，两个网页一级域名相同，只是二级域名不同，浏览器允许通过设置<code>document.domain</code>共享 Cookie。另外，服务器也可以在设置Cookie的时候，指定Cookie的所属域名为一级域名。这样的话，二级域名和三级域名不用做任何设置，都可以读取这个Cookie。  </p>
+<p><strong>注意：</strong><br><code>document.domain</code>限制：虽然可读写，但只能设置成自身或者是高一级的父域且主域必须相同。所以只能解决一级域名相同二级域名不同的跨域问题。<br><code>document.domain</code>只适用于 Cookie 和 iframe 窗口，LocalStorage 和 IndexDB 无法通过这种方法跨域。</p>
+<h2 id="五、window-name跨域"><a href="#五、window-name跨域" class="headerlink" title="五、window.name跨域"></a>五、window.name跨域</h2><p><strong>举例1：</strong>在浏览器的一个标签页里打开<code>http://www.baidu.cn/a.html</code>页面，想通过<code>location.href=http://riko.com/b.html</code>，在同一个浏览器标签页里打开了不同域名下的页面。这时候这两个页面可以使用<code>window.name</code>来传递参数。因为<code>window.name</code>指的是浏览器窗口的名字，只要浏览器窗口相同，那么无论在哪个网页里访问值都是一样的。<br><strong>举例2：</strong><code>http://www.baidu.cn/a.html</code>页面里使用<code>&lt;iframe&gt;</code>标签调用另一个<code>http://riko.com/b.html</code>页面。这时候我们想在a页面里获取b页面里的dom，然后进行操作。会发现不能获得b的dom。同样会因为不同源而报错，和上面提到的不同之处就是两个页面的一级域名也不相同。这时候<code>document.domain</code>就解决不了了。  </p>
+<p><strong>解决方案：</strong>浏览器窗口有<code>window.name</code>属性。这个属性的最大特点是，无论是否同源，只要在同一个窗口里，前一个网页设置了这个属性，后一个网页可以读取它。。比如在b页面里设定<code>window.name=&quot;hello&quot;</code>，再返回到a页面，在a页面里访问<code>window.name，</code>可以得到hello。</p>
+<p>这种方法的优点是，<code>window.name</code>容量很大，可以放置非常长的字符串；缺点是必须监听子窗口<code>window.name</code>属性的变化，影响网页性能。</p>
+<h2 id="六、postMessage方法跨域"><a href="#六、postMessage方法跨域" class="headerlink" title="六、postMessage方法跨域"></a>六、postMessage方法跨域</h2><p><strong>举例1：</strong>在a页面里打开了另一个不同源的页面b，想要让a和b两个页面互相通信。比如，a要访问b的LocalStorage。<br><strong>举例2：</strong>a页面里的iframe的src是不同源的b页面，想要让a和b两个页面互相通信。比如，a要访问b的LocalStorage。</p>
+<p><strong>解决方案：</strong>HTML5引入了一个全新的API，跨文档通信 API（Cross-document messaging）。这个API为window对象新增了一个<code>window.postMessage</code>方法，允许跨窗口通信，不论这两个窗口是否同源。a就可以把它的LocalStorage，发送给b，b也可以把自己的LocalStorage发给a。</p>
+<blockquote>
+<p>window.postMessage(message, targetOrigin, [transfer])，有三个参数：<br>message是向目标窗口发送的数据；<br>targetOrigin属性来指定哪些窗口能接收到消息事件，其值可以是字符串”*”（表示无限制）或者一个URI（或者说是发送消息的目标域名）；<br>transfer可选参数，是一串和message 同时传递的 Transferable 对象. 这些对象的所有权将被转移给消息的接收方，而发送一方将不再保有所有权。</p>
+</blockquote>
+<p>另外消息的接收方必须有监听事件，否则发送消息时就会报错。The target origin provided (‘<a href="http://localhost:8080&#39;">http://localhost:8080&#39;</a>) does not match the recipient window’s origin (‘<a href="http://localhost:63343&#39;">http://localhost:63343&#39;</a>).</p>
+<blockquote>
+<p>window.addEventListener(“message”,onmessage);onmessage接收到的message事件包含三个属性：<br>data：从其他 window 中传递过来的数据。<br>origin：调用 postMessage 时消息发送方窗口的 origin 。请注意，这个origin不能保证是该窗口的当前或未来origin，因为postMessage被调用后可能被导航到不同的位置。<br>source：对发送消息的窗口对象的引用; 您可以使用此来在具有不同origin的两个窗口之间建立双向通信。</p>
+</blockquote>
+<p>举例：在a页面执行：</p>
+<pre><code>var popup = window.open(&apos;http://localhost:4000&apos;, &apos;title&apos;);
+popup.postMessage(&apos;Hello World!&apos;, &apos;http://localhost:4000&apos;);</code></pre><p>同时在<a href="http://localhost:4000的页面里监听message事件：">http://localhost:4000的页面里监听message事件：</a></p>
+<pre><code>window.onload=function () {
+      window.addEventListener(&quot;message&quot;,onmessage);
+}
+function onmessage(event) {
+      if(event.origin==&quot;http://localhost:64343&quot;){//http://localhost:64343是发送方a的域名
+          console.log(event.data);//&apos;Hello World!&apos;
+      }
+      console.log(event.data);//&apos;Hello World!&apos;
+}</code></pre><blockquote>
+<p>注意: 在 Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)之前， 参数 message 必须是一个字符串。 从 Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)开始，参数 message被使用结构化克隆算法进行序列化。这意味着可以将各种各样的数据对象安全地传递到目标窗口，而不必自己序列化它们。</p>
+</blockquote>
+<h2 id="七、location-hash跨域"><a href="#七、location-hash跨域" class="headerlink" title="七、location.hash跨域"></a>七、location.hash跨域</h2><p><code>location.hash</code>就是指URL的#号后面的部分。<br><strong>举例：</strong>父窗口和iframe的子窗口之间通讯或者是<code>window.open</code>打开的子窗口之间的通讯。<br><strong>解决方案：</strong>父窗口改变子窗口的url的#号后面的部分，后者把要传递的参数写在#后面。子窗口监听<code>window.onhashchange</code>事件，得到通知，读取<code>window.location.hash</code>解析出有用的数据。同样子窗口也可以向父窗口传递数据。</p>
 
       
 
