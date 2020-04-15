@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Riko&#39;s blog</title>
+  <title>Ajax异步与同步 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Riko的前端自习室">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Riko&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/page/2/index.html">
+  <meta name="description" content="AJAX中根据async的值不同分为同步（async &#x3D; false）和异步（async &#x3D; true）两种执行方式；在W3C的教程中推荐使用异步执行。默认情况下async是true，也就是异步。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax异步与同步">
+<meta property="og:url" content="http://yoursite.com/2020/04/06/Ajax%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="Riko的前端自习室">
+<meta property="og:description" content="AJAX中根据async的值不同分为同步（async &#x3D; false）和异步（async &#x3D; true）两种执行方式；在W3C的教程中推荐使用异步执行。默认情况下async是true，也就是异步。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-06T15:29:21.000Z">
+<meta property="article:modified_time" content="2020-04-15T16:54:35.600Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -130,263 +132,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Ajax整理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ajax异步与同步
+    </h1>
+  
+
+        
+        <a href="/2020/04/06/Ajax%E6%95%B4%E7%90%86/" class="archive-article-date">
+  	<time datetime="2020-04-06T15:29:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-06</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font size="4">
+
+<p>AJAX中根据async的值不同分为同步（async = false）和异步（async = true）两种执行方式；在W3C的教程中推荐使用异步执行。<br>默认情况下async是true，也就是异步。  </p>
+<a id="more"></a>
+<p><strong>1. 同步请求：（false）</strong><br>同步请求是指发出请求之后，浏览器不做任何举动，必须等到请求完成并返回数据之后，才会继续执行代码。当JS代码加载到Ajax的时候会把页面所有代码停止加载，Ajax执行完毕才会继续运行页面其他代码。<br><strong>2. 异步请求：（true）</strong><br>异步请求是指发出请求的同时，浏览器继续执行后续代码，且必须使用一个事件处理函数来监控请求的响应。   </p>
+<h3 id="选择同步还是异步？"><a href="#选择同步还是异步？" class="headerlink" title="选择同步还是异步？"></a>选择同步还是异步？</h3><p>Ajax开发建议是：使用异步请求来实现数据获取，使用同步请求来实现与服务器之间发送和接收简单的消息。<br>用同步模式来发送请求（将open()方法的第三个参数设置为false），在调用send()方法之后马上对其响应进行处理。<br>这对于想让用户交互等待响应，或希望只接受很少的数据（例如，小于1kb）的应用场景是很有用的。<br>而对于通常数据量或者较大的数据量而言，最好是使用异步调用。<br>我们在发送AJAX请求后，还需要继续处理服务器的响应结果，如果这时我们使用异步请求模式同时未将结果的处理交由另一个JS函数进行处理。这时就有可能发生这种情况：异步请求的响应还没有到达，函数已经执行完了return语句了，这时将导致return的结果为空字符串。</p>
+<h3 id="如何设置Ajax为同步模式？"><a href="#如何设置Ajax为同步模式？" class="headerlink" title="如何设置Ajax为同步模式？"></a>如何设置Ajax为同步模式？</h3><pre><code>$.ajax({
+    url: &apos;&apos;,
+    async: false,
+    success: function() {
+        console.log(11);
+    }
+});</code></pre><p>只需将async字段的value值更改为false。</p>
+<h3 id="Tips"><a href="#Tips" class="headerlink" title="Tips:"></a>Tips:</h3><ul>
+<li>Jquery中的ajax在默认不写async情况下，请求为异步请求；即：async:true;</li>
+<li>如果某一项操作需要Ajax的验证，必须在验证之后才能进行其他操作；</li>
+<li>熟练应用error参数，关注返回来的异常信息，从而判定程序的错误位置。</li>
+</ul>
+</font>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2019-04-14T16:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/">DOM优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/04/11/Cookie-Session/" class="archive-article-date">
-  	<time datetime="2019-04-11T15:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/04/11/Cookie-Session/">Cookie与Session</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据存储//" class="article-tag-list-link color5">数据存储</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
-  	<time datetime="2019-03-06T14:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">CSS水平垂直居中</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/" class="archive-article-date">
-  	<time datetime="2019-02-10T11:11:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">JavaScript 加载时间线</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/25/GET-POST/" class="archive-article-date">
-  	<time datetime="2018-12-25T08:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/25/GET-POST/">GET与POST的区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
+        			<a href="/categories/Ajax//" class="article-tag-list-link color5">Ajax</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/06/Ajax%E6%95%B4%E7%90%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/20/border-radius/" class="archive-article-date">
-  	<time datetime="2018-12-20T11:31:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/04/10/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript设计模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/16/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">详谈Vue生命周期</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/20/border-radius/">border-radius</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -410,8 +341,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
