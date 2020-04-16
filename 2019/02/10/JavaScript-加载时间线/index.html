@@ -153,7 +153,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><font size = '4'>创建Document对象，解析到Web页面，解析HTML元素和文本内容后,添加Element对象和Text节点到文档中，这个阶段document.readyState = ‘loading’。<br></li>
+<li><font size="4">创建Document对象，解析到Web页面，解析HTML元素和文本内容后,添加Element对象和Text节点到文档中，这个阶段document.readyState = ‘loading’。<br></font></li>
 <li>遇到link标签链接外部css样式时，创建线程加载，继续解析。</li>
 <li>遇到script外部链接js,并且没有设置async、defer，浏览器会继续加载，导致阻塞。等待js加载完成并执行该脚本，继续解析文档。<a id="more"></a></li>
 <li>如果script外部链接js设置async或defer，浏览器会创建线程加载，继续解析。对于有async属性的脚本，会在脚本加载后立即执行。<b>（异步禁止使用document.write()）</b></li>

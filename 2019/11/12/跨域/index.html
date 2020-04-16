@@ -152,7 +152,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font size = '4'>
+        <font size="4">
 
 <p><strong>什么是跨域？</strong>  </p>
 <p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
@@ -257,7 +257,7 @@ function onmessage(event) {
 <p>注意: 在 Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)之前， 参数 message 必须是一个字符串。 从 Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3)开始，参数 message被使用结构化克隆算法进行序列化。这意味着可以将各种各样的数据对象安全地传递到目标窗口，而不必自己序列化它们。</p>
 </blockquote>
 <h2 id="七、location-hash跨域"><a href="#七、location-hash跨域" class="headerlink" title="七、location.hash跨域"></a>七、location.hash跨域</h2><p><code>location.hash</code>就是指URL的#号后面的部分。<br><strong>举例：</strong>父窗口和iframe的子窗口之间通讯或者是<code>window.open</code>打开的子窗口之间的通讯。<br><strong>解决方案：</strong>父窗口改变子窗口的url的#号后面的部分，后者把要传递的参数写在#后面。子窗口监听<code>window.onhashchange</code>事件，得到通知，读取<code>window.location.hash</code>解析出有用的数据。同样子窗口也可以向父窗口传递数据。</p>
-
+</font>
       
 
       
