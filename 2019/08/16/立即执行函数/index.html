@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>filter函数 | Riko&#39;s blog</title>
+  <title>立即执行函数 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。  注意： filter() 不会对空数组进行检测,不会改变原始数组。">
+  <meta name="description" content="立即执行函数没有声明，在一次执行后释放，适合初始化工作。   (function () {     let a &#x3D; 123,         b &#x3D; 234;     console.log(a + b); }())">
 <meta property="og:type" content="article">
-<meta property="og:title" content="filter函数">
-<meta property="og:url" content="http://yoursite.com/2019/07/05/filter%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="立即执行函数">
+<meta property="og:url" content="http://yoursite.com/2019/08/16/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。  注意： filter() 不会对空数组进行检测,不会改变原始数组。">
+<meta property="og:description" content="立即执行函数没有声明，在一次执行后释放，适合初始化工作。   (function () {     let a &#x3D; 123,         b &#x3D; 234;     console.log(a + b); }())">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-07-04T17:54:15.000Z">
-<meta property="article:modified_time" content="2020-04-14T17:23:16.018Z">
+<meta property="article:published_time" content="2019-08-16T08:08:22.000Z">
+<meta property="article:modified_time" content="2020-04-16T07:43:10.428Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -132,61 +132,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-filter函数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-立即执行函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      filter函数
+      立即执行函数
     </h1>
   
 
         
-        <a href="/2019/07/05/filter%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2019-07-04T17:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
+        <a href="/2019/08/16/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/" class="archive-article-date">
+  	<time datetime="2019-08-16T08:08:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font size = '4'>
+        <font size="4">
+立即执行函数没有声明，在一次执行后释放，适合初始化工作。
 
-<blockquote>
-<p>filter() 方法创建一个新的数组，新数组中的元素是通过检查指定数组中符合条件的所有元素。和map()类似，Array的filter()也接收一个函数。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。</p>
-</blockquote>
-<p>注意： filter() 不会对空数组进行检测,不会改变原始数组。 </p>
-<a id="more"></a> 
-<p>例如，在一个Array中，删掉偶数，只保留奇数，可以这么写:</p>
-<pre><code>var arr = [1, 2, 4, 5, 6, 9, 10, 15];
-var r = arr.filter(function (x) {
-    return x % 2 !== 0;
-});
-r; // [1, 5, 9, 15]</code></pre><p>把一个Array中的空字符串删掉，可以这么写：</p>
-<pre><code>var arr = [&apos;A&apos;, &apos;&apos;, &apos;B&apos;, null, undefined, &apos;C&apos;, &apos;  &apos;];
-var r = arr.filter(function (s) {
-     return s &amp;&amp; s.trim(); // 注意：IE9以下的版本没有trim()方法
- });
-arr; // [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</code></pre><h4>回调函数</h4>
+<pre><code> (function () {
+    let a = 123,
+        b = 234;
+    console.log(a + b);
+}())</code></pre><a id="more"></a>
+<p><strong>举例：</strong></p>
+<pre><code>var num = (function (a, b, c) {
+    var d = a + b + c * 2 - 2;
+    return d;
+}(1,2,3))</code></pre><p>num为立即执行函数的返回值，它依然有预编译，有执行期上下文。</p>
+<hr>
+<p><strong>立即执行函数形式：</strong>  </p>
+<ul>
+<li><code>(function () { }());</code></li>
+<li><code>(function () { })();</code></li>
+</ul>
+<p><font color="red">只有表达式才能被执行符号()执行，被执行符号执行的表达式成为立即执行函数，此时再去查找表达式，变成undefined。</font><br><strong>举例：</strong></p>
+<pre><code>function test(){}() //语法错误，这是函数声明，不是表达式
 
-<blockquote>
-<p>filter()接收的回调函数，其实可以有多个参数。通常我们仅使用第一个参数，表示Array的某个元素。回调函数还可以接收另外两个参数，表示元素的位置和数组本身：</p>
-</blockquote>
-<pre><code>var arr = [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;];
-var r = arr.filter(function (element, index, self) {
-    console.log(element); // 依次打印&apos;A&apos;, &apos;B&apos;, &apos;C&apos;
-    console.log(index); // 依次打印0, 1, 2
-    console.log(self); // self就是变量arr
-    return true;
-});</code></pre><p>Array去重：</p>
-<pre><code>var arr = [&apos;11&apos;,&apos;22&apos;,&apos;number12&apos;,&apos;apple&apos;,&apos;apple&apos;,&apos;11&apos;],
-     a;
-a = arr.filter(function(element,index,self){
-    return self.indexOf(element) === index;
-});
-console.log(a.toString());</code></pre>
++function test(){}()//用一元正负运算符，转为表达式 </code></pre><p>但下面的代码不会执行，也不会报错。</p>
+<pre><code>function test (a, b, c) {
+    console.log(a + b + c);
+} (1, 2, 3)  </code></pre><p>在浏览器眼里，上面的代码变成：</p>
+<pre><code>function test (a, b, c) {
+    ....
+} 
+....
+(1, 2, 3)</code></pre><h2 id="立即执行函数解决闭包问题"><a href="#立即执行函数解决闭包问题" class="headerlink" title="立即执行函数解决闭包问题"></a>立即执行函数解决闭包问题</h2><pre><code>function test() {
+    var arr = [];
+    for (i = 0; i &lt; 10; i++) {
+            (function (j) {
+             arr[j] = function () {
+                document.write(j + &apos;&apos;);
+             }
+         }(i));
+     }
+     return arr;
+      }
+var myArr = test();
+for (j = 0; j &lt; 10; j++) {
+    myArr[j]();
+ }</code></pre><p>页面会打印出0，1，2，3，4，5，6，7，8，9<br><strong>Tips：</strong><br>1.<code>(function(j)){}(i);</code> 这里的j是形参，i是实参;  </p>
+<p>2.即使执行立即执行函数，执行一次，释放一次，它会被放在arr[]数组里；</p>
+<pre><code>var arr = [];
+arr[j] = function () {
+    document.write(j + &apos;&apos;);//这条语句只能在外部才能够被执行。
+ }  </code></pre><p>3.在外部需要调用执行，才能打印，在这之前，都只是函数体。 myArr实际上调用的是function函数；</p>
+<pre><code>var myArr = test();
+for (j = 0; j &lt; 10; j++) {
+    myArr[j]();
+ }</code></pre><p>4.每个立即执行函数又包含一个被保存在外部的小函数，一共有10个立即执行函数，会在for循环里执行。</p>
+</font>
       
 
       
@@ -221,7 +241,7 @@ console.log(a.toString());</code></pre>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -276,7 +296,7 @@ console.log(a.toString());</code></pre>
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/05/filter%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/16/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -290,18 +310,18 @@ console.log(a.toString());</code></pre>
   
 <nav id="article-nav">
   
-    <a href="/2019/08/16/%E7%AB%8B%E5%8D%B3%E6%89%A7%E8%A1%8C%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/20/%E5%87%BD%E6%95%B0%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          立即执行函数
+          函数内部属性
         
       </div>
     </a>
   
   
-    <a href="/2019/05/16/%E9%97%AD%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">闭包</div>
+    <a href="/2019/07/05/filter%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">filter函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
