@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>浏览器地址栏输入url到显示页面的步骤 | Riko&#39;s blog</title>
+  <title>JS判断数组 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="简化版： 浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求； 服务器交给后台处理完成后返回数据，浏览器接收文件（HTML、JS、CSS、图象等）； 浏览器对加载到的资源（HTML、JS、CSS等）进行语法解析，建立相应的内部数据结构（如HTML的DOM）； 载入解析到的资源文件，页面渲染完成。">
+  <meta name="description" content="1. constructor方法：constructor属性返回对创建此对象的数组函数的引用，就是返回对象相对应的构造函数。 var arr &#x3D; []; arr.constructor &#x3D;&#x3D; Array; &#x2F;&#x2F;true">
 <meta property="og:type" content="article">
-<meta property="og:title" content="浏览器地址栏输入url到显示页面的步骤">
-<meta property="og:url" content="http://yoursite.com/2020/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%88%B0%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/index.html">
+<meta property="og:title" content="JS判断数组">
+<meta property="og:url" content="http://yoursite.com/2020/01/19/js%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="简化版： 浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求； 服务器交给后台处理完成后返回数据，浏览器接收文件（HTML、JS、CSS、图象等）； 浏览器对加载到的资源（HTML、JS、CSS等）进行语法解析，建立相应的内部数据结构（如HTML的DOM）； 载入解析到的资源文件，页面渲染完成。">
+<meta property="og:description" content="1. constructor方法：constructor属性返回对创建此对象的数组函数的引用，就是返回对象相对应的构造函数。 var arr &#x3D; []; arr.constructor &#x3D;&#x3D; Array; &#x2F;&#x2F;true">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-13T07:55:14.000Z">
-<meta property="article:modified_time" content="2020-04-16T11:01:59.862Z">
+<meta property="article:published_time" content="2020-01-18T16:12:36.000Z">
+<meta property="article:modified_time" content="2020-04-16T17:21:37.401Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -132,20 +132,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-浏览器地址栏输入url到显示页面的步骤" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js判断数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      浏览器地址栏输入url到显示页面的步骤
+      JS判断数组
     </h1>
   
 
         
-        <a href="/2020/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%88%B0%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" class="archive-article-date">
-  	<time datetime="2020-01-13T07:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-13</time>
+        <a href="/2020/01/19/js%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-01-18T16:12:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-19</time>
 </a>
         
       </header>
@@ -154,95 +154,18 @@
       
         <font size="4">
 
-<h3 id="简化版："><a href="#简化版：" class="headerlink" title="简化版："></a>简化版：</h3><ul>
-<li>浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求；</li>
-<li>服务器交给后台处理完成后返回数据，浏览器接收文件（HTML、JS、CSS、图象等）；</li>
-<li>浏览器对加载到的资源（HTML、JS、CSS等）进行语法解析，建立相应的内部数据结构（如HTML的DOM）；</li>
-<li>载入解析到的资源文件，页面渲染完成。<a id="more"></a>
-
-</li>
-</ul>
-<h3 id="详细版："><a href="#详细版：" class="headerlink" title="详细版："></a>详细版：</h3><ul>
-<li>首先我们在浏览器地址栏输入url。</li>
-<li>浏览器会查看自身缓存。<ul>
-<li>如果资源已经在缓存中，会检查资源保存时间，是否新鲜。期限没有过，就会直接将资源提供给客户端；接近期限，就会与服务器进行验证；</li>
-<li>如果资源不在缓存中，则直接发起新请求；</li>
-<li>检验资源是否新鲜需要HTTP头进行控制Expires和Cache-Control：<ul>
-<li>HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期。</li>
-<li>HTTP1.1增加了Cache-Control: max-age=,值为以秒为单位的最大新鲜时间。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>浏览器解析url获取协议、主机、端口、路径。</li>
-<li>浏览器通过HTTP（GET）请求报文。</li>
-<li>浏览器获取主机IP地址：<ul>
-<li>浏览器缓存；</li>
-<li>本机缓存；</li>
-<li>hosts文件；</li>
-<li>路由器缓存；</li>
-<li>DNS查询。</li>
-</ul>
-</li>
-<li>打开一个socket与目标IP地址，端口建立TCP链接，三次握手：<ul>
-<li>第一次握手，客户端请求建立连接（SYN=1），发出序列号（Seq=n）。这次握手让服务器知道客户端可以发出消息；</li>
-<li>第二次握手，服务器同意建立连接（SYN=1），确认收到刚才的信息（ACK=Seq+1=n+1）,发出自己的序列号（Seq=x，x为一个数字）；第二次握手让客户端知道服务端可以接收也可以发送信息，但此时服务端还不知道客户端能不能接收，所以服务端需要生成一个数，让客户端回复这个数+1，才能确认客户端能接收信息。第二次握手让客户端知道服务端能接收，也能发出；</li>
-<li>第三次握手，客户端发送SYN，收到了服务端的信息（ACK=Seq+1=x+1），并发出这次信息的序列号Seq。第三次握手让服务端知道客户端能接收。</li>
-</ul>
-</li>
-<li>TCP链接建立后发送HTTP请求。</li>
-<li>服务器接受请求并解析，将请求转发到服务程序，如虚拟主机使用HTTP Host头部判断请求的服务程序。</li>
-<li>服务器检查HTTP请求头是否包含缓存验证信息如果验证缓存新鲜，返回304等对应状态码。</li>
-<li>处理程序读取完整请求并准备HTTP响应，可能需要查询数据库等操作。</li>
-<li>服务器将响应报文通过TCP连接发送回浏览器。</li>
-<li>浏览器接收HTTP响应，然后根据情况选择关闭TCP连接或者保留重用，关闭TCP连接的四次挥手如下：<ul>
-<li>客户端给服务器发送Fin=1，ACK=Z，Seq=n报。，数据传递完，不能直接断开，服务器不知道数据传完了，客户端要告诉服务器数据传完了。第一次挥手，客户端告诉服务器数据传完了。</li>
-<li>服务器发送ACK=n+1， Seq=Z报文。依旧是之前客户端发给服务器，但服务器还没有接收完数据，虽然知道客户端已经把数据传完了，所以服务器只能先回复客户端知道传完了。第二次挥手，服务器知道客户端数据发完了。</li>
-<li>服务器发送Fin=1， ACK=X， Seq=Y报文。客户端已经发完，但不确定服务端接收完数据，因此客户端只能等待不能断开连接，一旦服务器没有接收成功，客户端还要继续发送。第三次挥手，服务器告诉客户端数据接收完了。</li>
-<li>客户端发送ACK=Y， Seq=X报文。客户端知道服务器接收完了，断开连接。第四次挥手，客户端知道服务端接收完了。</li>
-</ul>
-</li>
-<li>浏览器检查响应状态吗：是否为1XX，3XX， 4XX， 5XX。</li>
-<li>如果资源可缓存，进行缓存。</li>
-<li>对响应进行解码（例如gzip压缩）。</li>
-<li>根据资源类型决定如何处理（假设资源为HTML文档）。</li>
-<li>解析HTML文档，构件DOM树，下载资源，构造CSSOM树，执行js脚本。</li>
-<li>构建DOM树：<ul>
-<li>根据HTML规范将字符流解析为标记；</li>
-<li>词法分析将标记转换为对象并定义属性和规则；</li>
-<li>根据HTML标记关系将对象组成DOM树。</li>
-</ul>
-</li>
-<li>解析过程中遇到图片、样式表、js文件，启动下载；</li>
-<li>构建CSSOM树：<ul>
-<li>字符流转换为标记流；</li>
-<li>根据标记创建节点；</li>
-<li>节点创建CSSOM树。</li>
-</ul>
-</li>
-<li>根据DOM树和CSSOM树构建渲染树:<ul>
-<li>从DOM树的根节点遍历所有可见节点，不可见节点包括：<ul>
-<li>（1）script,meta这样本身不可见的标签；</li>
-<li>（2）被css隐藏的节点，如display: none。</li>
-</ul>
-</li>
-<li>对每一个可见节点，找到恰当的CSSOM规则并应用。</li>
-<li>发布可视节点的内容和计算样式。</li>
-</ul>
-</li>
-<li>js解析过程：<ul>
-<li>浏览器创建Document对象并解析HTML，将解析到的元素和文本节点添加到文档中，此时document.readystate为loading。</li>
-<li>HTML解析器遇到没有async和defer的script时，将他们添加到文档中，然后执行行内或外部脚本。这些脚本会同步执行，并且在脚本下载和执行时解析器会暂停。这样就可以用document.write()把文本插入到输入流中。同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作script和他们之前的文档内容。</li>
-<li>当解析器遇到设置了async属性的script时，开始下载脚本并继续解析文档。脚本会在它下载完成后尽快执行，但是解析器不会停下来等它下载。异步脚本禁止使用document.write()，它们可以访问自己script和之前的文档元素。</li>
-<li>当文档完成解析，document.readState变成interactive（可交互）。</li>
-<li>所有defer脚本会按照在文档出现的顺序执行，延迟脚本能访问完整文档树，禁止使用document.write()。</li>
-<li>浏览器在Document对象上触发DOMContentLoaded事件。</li>
-<li>此时文档完全解析完成，浏览器可能还在等待如图片等内容加载，等这些内容完成载入并且所有异步脚本完成载入和执行，document.readState变为complete，window触发load事件。</li>
-</ul>
-</li>
-<li>显示页面（HTML解析过程中会逐步显示页面）</li>
-</ul>
-</font>
+<p><strong>1. constructor方法：</strong>constructor属性返回对创建此对象的数组函数的引用，就是返回对象相对应的构造函数。</p>
+<pre><code>var arr = [];
+arr.constructor == Array; //true</code></pre><a id="more"></a>
+<p><strong>2. isArray()</strong></p>
+<pre><code>var a = new Array(1111);
+console.log(Array.isArray(a)); //true</code></pre><p><strong>3. instanceof方法:</strong>测试一个对象是否在其原型链原型构造函数的属性.</p>
+<pre><code>var arr = [];
+arr instanceof Array; // true</code></pre><p><strong>4. jQuery使用</strong></p>
+<pre><code>Object.prototype.toString.call(value) == &apos;[object Array]&apos;;
+var isType = function (obj) {
+     return Object.prototype.toString.call(obj).slice(8,-1);
+}</code></pre></font>
       
 
       
@@ -277,7 +200,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -332,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%88%B0%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/19/js%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -346,18 +269,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/19/js%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/03/Vue%E5%8F%8C%E5%90%91%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          JS判断数组
+          Vue双向数据绑定
         
       </div>
     </a>
   
   
-    <a href="/2019/11/12/%E8%B7%A8%E5%9F%9F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">跨域</div>
+    <a href="/2020/01/13/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%9C%B0%E5%9D%80%E6%A0%8F%E8%BE%93%E5%85%A5url%E5%88%B0%E6%98%BE%E7%A4%BA%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%AD%A5%E9%AA%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">浏览器地址栏输入url到显示页面的步骤</div>
       <i class="icon-circle-right"></i>
     </a>
   
