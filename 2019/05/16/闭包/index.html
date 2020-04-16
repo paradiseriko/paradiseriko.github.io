@@ -16,7 +16,7 @@
 <meta property="og:description" content="由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。 举个例子：    var innerFn &#x3D; null;   function father() {       var n &#x3D; 10;     function son() {         n++;         console.log(n);     }     innerFn &#x3D; son; } father(); in">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-05-15T17:00:54.000Z">
-<meta property="article:modified_time" content="2020-04-14T17:25:14.598Z">
+<meta property="article:modified_time" content="2020-04-16T12:12:46.323Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -208,6 +208,25 @@ function father() {
     son();//当函数执行完成之后，在ECS里sonEC会被删除
     }
 father();//fatherEC也会从ECS里删除，已经执行完；而fatherEC删除，father()执行完，globalE会弹出</code></pre><p><strong>普通函数定义函数是嵌套的，调用的时候是嵌套的；而闭包是定义函数是嵌套的，调用的时候是独立的</strong></p>
+<hr>
+<p><strong>对闭包的理解</strong></p>
+<ul>
+<li>闭包的用处：<ul>
+<li>可以读取函数内部的变量让这些变量始终保持在内存中；</li>
+<li>封装对象的私有属性和私有方法。</li>
+</ul>
+</li>
+<li>闭包的优缺点：<ul>
+<li>优点：能够实现封装和缓存，避免全局变量的污染。</li>
+<li>缺点：闭包会常驻内存，会增大内存使用量，使用不当很容易造成内存泄露。</li>
+</ul>
+</li>
+</ul>
+<p><strong>Tips：</strong>    </p>
+<ul>
+<li>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。</li>
+<li>解决方法是，在退出函数之前，将不使用的局部变量全部删除。</li>
+</ul>
 <p>闭包的形式：</p>
 <pre><code>//第一种
 var a = 20;
