@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Riko&#39;s blog</title>
+  <title>this关键字 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Riko的前端自习室">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Riko&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+  <meta name="description" content="当前执行代码的环境对象，在非严格模式下，this总是指向一个对象，在严格模式下可以是任意值。  全局环境 无论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象，也就是指向window。  &#x2F;&#x2F; 在浏览器中, window 对象同时也是全局对象： console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true this.a &#x3D; &quot;RIKO&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="this关键字">
+<meta property="og:url" content="http://yoursite.com/2019/06/17/this%E5%85%B3%E9%94%AE%E5%AD%97/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="Riko的前端自习室">
+<meta property="og:description" content="当前执行代码的环境对象，在非严格模式下，this总是指向一个对象，在严格模式下可以是任意值。  全局环境 无论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象，也就是指向window。  &#x2F;&#x2F; 在浏览器中, window 对象同时也是全局对象： console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true this.a &#x3D; &quot;RIKO&amp;q">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-06-17T06:59:55.000Z">
+<meta property="article:modified_time" content="2020-04-17T11:29:48.804Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -130,104 +132,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-GET-POST" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-this关键字" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/25/GET-POST/">GET与POST的区别</a>
+    <h1 class="article-title" itemprop="name">
+      this关键字
     </h1>
   
 
         
-        <a href="/2018/12/25/GET-POST/" class="archive-article-date">
-  	<time datetime="2018-12-25T08:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基于什么前提讨论？"><a href="#基于什么前提讨论？" class="headerlink" title="基于什么前提讨论？"></a>基于什么前提讨论？</h2><font size="4">
-1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。<br> 
-2.基于RFC规范：  
-
-<blockquote>
-<p>征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。</p>
-</blockquote></font>
-        
-          <a class="article-more-a" href="/2018/12/25/GET-POST/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/25/GET-POST/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-border-radius" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/20/border-radius/">border-radius</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/20/border-radius/" class="archive-article-date">
-  	<time datetime="2018-12-20T11:31:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
+        <a href="/2019/06/17/this%E5%85%B3%E9%94%AE%E5%AD%97/" class="archive-article-date">
+  	<time datetime="2019-06-17T06:59:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-17</time>
 </a>
         
       </header>
@@ -235,21 +153,147 @@
     <div class="article-entry" itemprop="articleBody">
       
         <font size="4">
-通过border-radius我们能够很轻易画出一个圆：  
-HTML:  
 
-<pre><code>&lt;div class = &apos;demo&apos;&gt;&lt;/div&gt;</code></pre><p>CSS:</p>
-<pre><code>.demo{
-    width:100px;
-    height:100px;
-    background-color:red;
-    border-radius:50px;
-}</code></pre></font>
-        
-          <a class="article-more-a" href="/2018/12/20/border-radius/#more">more >></a>
-        
+<blockquote>
+<p>当前执行代码的环境对象，在非严格模式下，this总是指向一个对象，在严格模式下可以是任意值。</p>
+</blockquote>
+<h1 id="全局环境"><a href="#全局环境" class="headerlink" title="全局环境"></a>全局环境</h1><blockquote>
+<p>无论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象，也就是指向window。</p>
+</blockquote>
+<pre><code>// 在浏览器中, window 对象同时也是全局对象：
+console.log(this === window); // true
+this.a = &quot;RIKO&quot;;
+console.log(window.a)  // &quot;RIKO&quot;</code></pre><a id="more"></a>
+<hr>
+<h1 id="函数预编译"><a href="#函数预编译" class="headerlink" title="函数预编译"></a>函数预编译</h1><blockquote>
+<p>在函数内部，this的值取决于函数被调用的方式。</p>
+</blockquote>
+<ul>
+<li>不在严格模式下，this的值默认指向全局对象window</li>
+</ul>
+<pre><code>function f1(){
+  console.log(this);
+}
+f1();//在浏览器中，全局对象是window
+//在Node中：
+f1() === global;</code></pre><ul>
+<li>严格模式下，this将保持他进入执行环境时的值，所以下面的this将会默认为undefined。</li>
+</ul>
+<pre><code>function f2(){
+  &quot;use strict&quot;; // 这里是严格模式
+  return this;
+}
+
+f2() === undefined; // true</code></pre><p>在严格模式下，f2()是直接被调用的，不是作为对象的属性或者方法调用，因此this的值是undefined。</p>
+<ul>
+<li>call/apply/bind方法可以改变函数运行时this指向。</li>
+</ul>
+<p><strong>call方法：</strong>使用一个指定的 this 值和单独给出的一个或多个参数来调用一个函数。</p>
+<blockquote>
+<p>语法：function.call(thisArg, arg1, arg2, …);<br>this.Arg: 可选，在function函数运行时使用的this值,当函数处于严格模式时，在function函数运行时使用的this值；非严格模式，则指定为null或undefined时会自动替换为指向全局对象，原始值会被包装。<br>arg1, arg2, …：参数列表。<br>使用调用者提供的 this 值和参数调用该函数的返回值。若该方法没有返回值，则返回 undefined。</p>
+</blockquote>
+<pre><code>// 将一个对象作为call的第一个参数，this会被绑定到这个对象。
+var obj = {a: &apos;food&apos;};
+
+// 这个属性是在global对象定义的。
+var a = &apos;bread&apos;;
+
+function whatsThis(arg) {
+  return this.a;  // this的值取决于函数的调用方式
+}
+
+whatsThis();          // &apos;bread&apos;
+whatsThis.call(obj);  // &apos;food&apos;</code></pre><p><strong>apply方法：</strong>调用一个具有给定this值的函数，以及作为一个数组（或类似数组对象）提供的参数。<br><font color="red">注意：call()方法的作用和 apply() 方法类似，区别就是call()方法接受的是参数列表，而apply()方法接受的是一个参数数组。</font>  </p>
+<blockquote>
+<p>func.apply(thisArg, [argsArray]);<br>thisArg：必选的。在func函数运行时使用的this值,与call方法要求相同。<br>argsArray：可选，一个数组或者类数组对象，其中的数组元素将作为单独的参数传给func函数。如果该参数的值为null或undefined，则表示不需要传入任何参数。从ES5开始可以使用类数组对象。</p>
+</blockquote>
+<pre><code>function add(c, d) {
+  return this.a + this.b + c + d;
+}
+
+var o = {a: 1, b: 3};
+
+// 第一个参数也是作为‘this’使用的对象
+// 第二个参数是一个数组，数组里的元素用作函数调用中的参数
+add.apply(o, [10, 20]); // 1 + 3 + 10 + 20 = 34</code></pre><p><font color="red">注意：如果传递给this的值不是一个对象，js会尝试使用内部的ToObject将其转换为对象，例如：</font>  </p>
+<pre><code>function food() {
+  console.log(Object.prototype.toString.call(this));
+}
+
+//原始值 7 被隐式转换为对象
+bar.call(1); // [object Number],new Number(1)
+bar.call(&apos;potato&apos;); // [object String],new String(&apos;potato&apos;)</code></pre><p><strong>bind方法：</strong>创建一个新的函数，在bind()被调用时，这个新函数的this被指定为bind()的第一个参数，而其余参数将作为新函数的参数，供调用时使用。   </p>
+<blockquote>
+<p>function.bind(thisArg[, arg1[, arg2[, …]]]);<br>thisArg：调用绑定函数时作为this参数传递给目标函数的值。如果使用new运算符构造绑定函数，则忽略该值。当使用bind在setTimeout中创建一个函数（作为回调提供）时，作为thisArg传递的任何原始值都将转换为object。如果bind函数的参数列表为空，执行作用域的this将被视为新函数的 thisArg。<br>arg1, arg2, …：当目标函数被调用时，被预置入绑定函数的参数列表中的参数。  </p>
+</blockquote>
+<p><font color="red">注意：调用f.bind(someObject)会创建一个与f具有相同函数体和作用域的函数，但是在这个新函数中，this将永久地被绑定到了bind的第一个参数，无论这个函数是如何被调用的。</font>  </p>
+<pre><code>function f(){
+  return this.a;
+}
+
+var g = f.bind({a:&quot;icecream&quot;});
+console.log(g()); // icecream
+
+var h = g.bind({a:&apos;food&apos;}); // bind只生效一次！
+console.log(h()); // icecream</code></pre><ul>
+<li><strong>obj.func():</strong>func()里的this指向obj,谁调用this,this指向谁。</li>
+</ul>
+<pre><code>    var obj = {
+        a:function ( ) {
+            console.log(this.name);//abc
+        },
+        name:&apos;abc&apos;
+    }
+    obj.a();
+
+但像上面那样调用，是不受函数定义方式或位置影响。
+
+    var a = { name: &apos;abc&apos; };
+    function independent() {
+        return this.name;
+    }
+    a.f = independent;
+    console.log(a.f()); //abc</code></pre><ul>
+<li>构造函数：this绑定在正在构造的新对象。</li>
+</ul>
+<pre><code>function C(){
+  this.a = 37;
+}
+
+var o = new C();
+console.log(o.a); //37
+
+
+function C2(){
+  this.a = 37;
+  return {a:38};// 如果函数具有返回对象的return语句，则该对象将是new表达式的结果，否则，表达式的结果是当前绑定到this的对象。
+}
+
+o = new C2();
+console.log(o.a); //38</code></pre></font>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -261,7 +305,7 @@ HTML:
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -269,16 +313,84 @@ HTML:
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/20/border-radius/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/17/this%E5%85%B3%E9%94%AE%E5%AD%97/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/07/05/filter%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          filter函数
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/16/%E9%97%AD%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">闭包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -298,12 +410,14 @@ HTML:
 
 
 
+  
+  
+  
 
   
+
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
+
   
 
 
@@ -326,8 +440,8 @@ HTML:
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
