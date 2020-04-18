@@ -16,7 +16,7 @@
 <meta property="og:description" content="当前执行代码的环境对象，在非严格模式下，this总是指向一个对象，在严格模式下可以是任意值。  全局环境 无论是否在严格模式下，在全局执行环境中（在任何函数体外部）this 都指向全局对象，也就是指向window。  &#x2F;&#x2F; 在浏览器中, window 对象同时也是全局对象： console.log(this &#x3D;&#x3D;&#x3D; window); &#x2F;&#x2F; true this.a &#x3D; &quot;RIKO&amp;q">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-06-17T06:59:55.000Z">
-<meta property="article:modified_time" content="2020-04-17T11:29:48.804Z">
+<meta property="article:modified_time" content="2020-04-18T14:55:15.849Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -270,7 +270,24 @@ function C2(){
 }
 
 o = new C2();
-console.log(o.a); //38</code></pre></font>
+console.log(o.a); //38</code></pre><ul>
+<li>箭头函数：箭头函数的this是在定义函数时绑定的，不是在执行过程中绑定的。简单的说，函数在定义时，this就继承了定义函数的对象。  <ul>
+<li>解决匿名函数和setTimeout和setInterval的this指向问题，不用再去给其用that变量存储this。</li>
+</ul>
+</li>
+</ul>
+<pre><code>var obj = {
+    func: function () {
+        console.log(this);
+    },
+    say: function () {
+        setTimeout(() =&gt; {
+            console.log(this);
+        })
+    }
+}
+obj.func();//Object
+obj.say();//Object</code></pre></font>
       
 
       
