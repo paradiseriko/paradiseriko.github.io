@@ -6,17 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>GET与POST的区别 | Riko&#39;s blog</title>
+  <title>Archives: 2019/1 | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于什么前提讨论？ 1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。  2.基于RFC规范：     征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="GET与POST的区别">
-<meta property="og:url" content="http://yoursite.com/2018/12/25/GET-POST/index.html">
+  <meta name="description" content="Riko的前端自习室">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Riko&#39;s blog">
+<meta property="og:url" content="http://yoursite.com/archives/2019/01/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="基于什么前提讨论？ 1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。  2.基于RFC规范：     征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。">
+<meta property="og:description" content="Riko的前端自习室">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2018-12-25T08:20:44.000Z">
-<meta property="article:modified_time" content="2020-04-14T17:25:14.596Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -132,197 +130,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-GET-POST" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      GET与POST的区别
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/" class="archive-article-date">
+  	<time datetime="2019-01-19T08:25:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/">原型继承和Class继承</a>
     </h1>
   
 
-        
-        <a href="/2018/12/25/GET-POST/" class="archive-article-date">
-  	<time datetime="2018-12-25T08:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基于什么前提讨论？"><a href="#基于什么前提讨论？" class="headerlink" title="基于什么前提讨论？"></a>基于什么前提讨论？</h2><font size="4">
-1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。<br> 
-2.基于RFC规范：  
-
-<blockquote>
-<p>征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。</p>
-</blockquote>
- <a id="more"></a>
-<ul>
-<li>理论上的：GET和POST具有相同的语法，但有不同的语义，GET是获取，POST发送数据，其他方面无差别。</li>
-<li>实现上的：基于各种浏览器实践，才会有不同：<ul>
-<li>GET数据在URL是可见的，POST请求不显示在URL中，但不代表在地址栏可见。</li>
-<li>GET对数据长度有限制，POST长度无限制。</li>
-<li>GET请求的数据可以收藏为标签，POST请求的数据不可以收藏为标签。</li>
-<li>GET请求后，按后退按钮，刷新按钮无影响，POST数据会被重新提交。</li>
-<li>GET编码类型application/x-www-form-url；POST编码类型可以有很多种，举例：application/x-www-form-urlencoded、multipart/form-data、application/json、text/xml</li>
-<li>GET历史参数会被保留在浏览器里，POST不会被保留在浏览器中。</li>
-<li>GET只允许ASCII，POST没有编码限制，允许二进制。</li>
-<li>GET与POST相比，GET安全性能较差，因为所发的数据是URL的一部分。</li>
-</ul>
-</li>
-</ul>
-</font>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+        <div class="article-info info-on-right">
+          
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/12/25/GET-POST/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          原型继承和Class继承
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/12/20/border-radius/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">border-radius</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -345,8 +206,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
