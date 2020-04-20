@@ -383,6 +383,87 @@ Vue生命周期总共分为8个阶段创建前/后，载入前/后，更新前/�
 
 
   
+    <article id="post-new" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/02/new/">new</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/02/new/" class="archive-article-date">
+  	<time datetime="2020-03-02T09:42:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font size="4">
+
+<h2 id="new-的原理"><a href="#new-的原理" class="headerlink" title="new 的原理"></a>new 的原理</h2><ul>
+<li>创建一个空对象，构造函数中 this 指向这个对象。</li>
+<li>新对象执行原型连接，执行构造函数的方法，属性和方法被添加到 this 引用的对象中，构造函数的作用域赋给新对象。</li>
+<li>如果构造函数中没有返回其他对象，那么返回 this,即创建的这个新对象，否则，返回构造函数中返回的对象。</li></ul></font>
+        
+          <a class="article-more-a" href="/2020/03/02/new/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/02/new/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -848,88 +929,6 @@ arr.constructor == Array; //true</code></pre></font>
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/17/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%BC%93%E5%AD%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-跨域" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/">跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/12/%E8%B7%A8%E5%9F%9F/" class="archive-article-date">
-  	<time datetime="2019-11-11T16:49:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-
-<p><strong>什么是跨域？</strong>  </p>
-<p>页面本身：有协议（http/https）、域名、端口号（http:80;https:443）<br>协议、域名、端口号，任意一个不一致就是跨域。  </p>
-<blockquote>
-<p>同源政策的目的，是为了保证用户信息的安全，防止恶意的网站窃取数据。<br>设想这样一种情况：A网站是一家银行，用户登录以后，又去浏览其他网站。如果其他网站可以读取A网站的 Cookie，会发生什么？<br>很显然，如果 Cookie 包含隐私（比如存款总额），这些信息就会泄漏。更可怕的是，Cookie 往往用来保存用户的登录状态，如果用户没有退出登录，其他网站就可以冒充用户，为所欲为。因为浏览器同时还规定，提交表单不受同源政策的限制。<br>由此可见，”同源政策”是必需的，否则 Cookie 可以共享，互联网就毫无安全可言了。</p>
-</blockquote></font>
-        
-          <a class="article-more-a" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/12/%E8%B7%A8%E5%9F%9F/">展开全文 >></a>
         </p>
       
 
