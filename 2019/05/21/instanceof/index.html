@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Riko&#39;s blog</title>
+  <title>instanceof | Riko&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Riko的前端自习室">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Riko&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+  <meta name="description" content="instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。  语法：object instanceof constructor，object:实例对象，constructor：构造函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="instanceof">
+<meta property="og:url" content="http://yoursite.com/2019/05/21/instanceof/index.html">
 <meta property="og:site_name" content="Riko&#39;s blog">
-<meta property="og:description" content="Riko的前端自习室">
+<meta property="og:description" content="instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。  语法：object instanceof constructor，object:实例对象，constructor：构造函数">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-05-21T11:28:36.000Z">
+<meta property="article:modified_time" content="2020-04-20T12:05:40.045Z">
 <meta property="article:author" content="Riko">
 <meta property="article:tag" content="JavaScript">
 <meta property="article:tag" content="HTML">
@@ -130,350 +132,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-闭包" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-instanceof" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/16/%E9%97%AD%E5%8C%85/">闭包</a>
+    <h1 class="article-title" itemprop="name">
+      instanceof
     </h1>
   
 
         
-        <a href="/2019/05/16/%E9%97%AD%E5%8C%85/" class="archive-article-date">
-  	<time datetime="2019-05-15T17:00:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。"><a href="#由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。" class="headerlink" title="由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。"></a>由父函数和子函数组成，子函数在调用时读取父函数的变量，产生了闭包。</h2><font size="4">
-举个例子：  
-
-<pre><code>var innerFn = null;  
-function father() {  
-    var n = 10;
-    function son() {
-        n++;
-        console.log(n);
-    }
-    innerFn = son;
-}
-father();
-innerFn();</code></pre></font>
-        
-          <a class="article-more-a" href="/2019/05/16/%E9%97%AD%E5%8C%85/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/05/16/%E9%97%AD%E5%8C%85/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-预编译和执行期上下文" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/24/%E9%A2%84%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E6%9C%9F%E4%B8%8A%E4%B8%8B%E6%96%87/">预编译和执行上下文</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/24/%E9%A2%84%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E6%9C%9F%E4%B8%8A%E4%B8%8B%E6%96%87/" class="archive-article-date">
-  	<time datetime="2019-04-23T16:15:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-
-<h2 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h2><ul>
-<li>imply global 暗示全局变量，如果变量未经声明就赋值，此变量为全局对象所有。<br> <code>a = 10;</code>等于<code>window.a = 10;</code></li>
-<li>一切声明的全局变量，都是window的属性，例如<code>var a = 123; window.a =123;</code>window就是全局的域，global object</li></ul></font>
-        
-          <a class="article-more-a" href="/2019/04/24/%E9%A2%84%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E6%9C%9F%E4%B8%8A%E4%B8%8B%E6%96%87/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/24/%E9%A2%84%E7%BC%96%E8%AF%91%E5%92%8C%E6%89%A7%E8%A1%8C%E6%9C%9F%E4%B8%8A%E4%B8%8B%E6%96%87/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-DOM优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/">DOM优化</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2019-04-14T16:22:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="DOM操作成本"><a href="#DOM操作成本" class="headerlink" title="DOM操作成本"></a>DOM操作成本</h2><font size="4">
-DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API。HTML(Hyper Text Markup Language)是一种标记语言，HTML 在DOM的模型标准中被视为对象，DOM只提供编程接口，却无法实际操作HTML里面的内容。前端可以用脚本语言(JavaScript) 通过DOM去操作HTML内容。实质上还存在CSSOM: CSS Object Model，浏览器将CSS代码解析成树形的数据结构，与DOM是两个独立的数据结构。</font>
-        
-          <a class="article-more-a" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/15/DOM%E4%BC%98%E5%8C%96/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Cookie-Session" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/11/Cookie-Session/">Cookie与Session</a>
-    </h1>
-  
-
-        
-        <a href="/2019/04/11/Cookie-Session/" class="archive-article-date">
-  	<time datetime="2019-04-11T15:15:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-关于数据存储我们需要知道用JS的变量来存储数据，页面关闭，数据会消失。  
-
-<ul>
-<li><strong>那么如何保持登录状态呢？</strong>  </li>
-</ul>
-<p>按照HTTP协议，上下文无关协议，是做不到的，因此在前端页面中，Cookie可以持久化存储数据，一旦登录成功，就会保存数据。</p></font>
-        
-          <a class="article-more-a" href="/2019/04/11/Cookie-Session/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据存储//" class="article-tag-list-link color5">数据存储</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/11/Cookie-Session/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Typeof" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/18/Typeof/">typeof</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/18/Typeof/" class="archive-article-date">
-  	<time datetime="2019-03-18T15:31:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-18</time>
+        <a href="/2019/05/21/instanceof/" class="archive-article-date">
+  	<time datetime="2019-05-21T11:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-21</time>
 </a>
         
       </header>
@@ -483,22 +155,102 @@ DOM是Model，是Object Model, 对象模型，是为HTML (and XML) 提供的API�
         <font size="4">
 
 <blockquote>
-<p>typeof 操作符返回一个字符串，表示未经计算的操作数的类型。</p>
+<p>instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上。</p>
 </blockquote>
-<ul>
-<li>typeof 对于基本类型，除了 null 都可以显示正确的类型</li>
+<p>语法：object instanceof constructor，object:实例对象，constructor：构造函数<a id="more"></a></p>
+<pre><code>// 定义构造函数
+function C(){} 
+function D(){} 
+
+var o = new C();
+
+
+o instanceof C; // true，因为 Object.getPrototypeOf(o) === C.prototype
+
+
+o instanceof D; // false，因为 D.prototype 不在 o 的原型链上
+
+o instanceof Object; // true，因为 Object.prototype.isPrototypeOf(o) 返回 true
+C.prototype instanceof Object // true，同上
+
+C.prototype = {};
+var o2 = new C();
+
+o2 instanceof C; // true
+
+o instanceof C; // false，C.prototype 指向了一个空对象,这个空对象不在 o 的原型链上.
+
+D.prototype = new C(); // 继承
+var o3 = new D();
+o3 instanceof D; // true
+o3 instanceof C; // true 因为 C.prototype 现在在 o3 的原型链上</code></pre><ul>
+<li>构造函数的prototypr会发生变化，改变后的值不一定存在于实例对象的原型链上。</li>
+<li>目前，我们只能读取对象的原型而不能改变它，但借助于非标准的 <strong>proto</strong> 伪属性，是可以实现的。比如执行 obj.<strong>proto</strong> = {} 之后，obj instanceof Foo 就会返回 false 了。</li>
 </ul>
-<pre><code>typeof 2 // &apos;number&apos;
-typeof &apos;2&apos; // &apos;string&apos;
-typeof undefined // &apos;undefined&apos;
-typeof true // &apos;boolean&apos;
-typeof Symbol() // &apos;symbol&apos;
-typeof b // b 没有声明，但是还会显示 undefined</code></pre></font>
-        
-          <a class="article-more-a" href="/2019/03/18/Typeof/#more">more >></a>
-        
+<h2 id="instanceof实现原理"><a href="#instanceof实现原理" class="headerlink" title="instanceof实现原理"></a>instanceof实现原理</h2><ul>
+<li>获取类型的原型</li>
+<li>获得对象的原型</li>
+<li>环判断对象的原型是否等于类型的原型，直到对象原型为 null，因为原型链最终为 nul</li>
+</ul>
+<pre><code>function myInstanceof(left, right) {
+      let prototype = right.prototype; // 取右表达式的 prototype 值
+      left = left.__proto__; // 取左表达式的__proto__值
+      while (true) {
+        if (left === null || left === undefined);
+          return false;
+        if (prototype === left);
+          return true;
+        left = left.__proto__;
+      }
+    }</code></pre><ul>
+<li>instanceof 只要右边变量的 prototype 在左边变量的原型链上即可。</li>
+<li>instanceof 在查找的过程中会遍历左边变量的原型链，直到找到右边变量的 prototype，如果查找失败，就会返回 false。</li>
+</ul>
+<h2 id="特殊情况："><a href="#特殊情况：" class="headerlink" title="特殊情况："></a>特殊情况：</h2><pre><code>var simpleStr = &quot;This is a simple string&quot;; 
+var newStr    = new String(&quot;String created with constructor&quot;);
+var myDate    = new Date();
+var myObj     = {};
+var myNonObj  = Object.create(null);
+
+simpleStr instanceof String; // 返回 false, 检查原型链会找到 undefined
+newStr    instanceof String; // 返回 true
+
+myObj instanceof Object;    // 返回 true, 尽管原型没有定义
+({})  instanceof Object;    // 返回 true, 同上
+myNonObj instanceof Object; // 返回 false, 一种创建非 Object 实例的对象的方法
+
+myDate instanceof Date;     // 返回 true
+myDate instanceof Object;   // 返回 true</code></pre><p>String 和 Date 对象同时也属于Object 类型（他们是由 Object 类派生出来的）。    使用对象文字符号创建的对象在这里是一个例外：虽然原型未定义，但 instanceof Object 返回 true。    </p>
+<h2 id="instanceof与typeof的区别："><a href="#instanceof与typeof的区别：" class="headerlink" title="instanceof与typeof的区别："></a>instanceof与typeof的区别：</h2><ul>
+<li>typeof判断所有变量的类型，返回值有number，boolean，string，function，object，undefined。</li>
+<li>typeof对于丰富的对象实例，只能返回”Object”字符串。</li>
+<li>instanceof用来判断对象，代码形式为obj1 instanceof obj2（obj1是否是obj2的实例），obj2必须为对象，否则会报错，其返回值为布尔值。</li>
+<li>instanceof可以对不同的对象实例进行判断，判断方法是根据对象的原型链依次向下查询，如果obj2的原型属性存在obj1的原型链上，（obj1 instanceof obj2）值为true，可以在继承关系中用来判断一个实例是否属于它的父类</li>
+</ul>
+</font>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -518,16 +270,84 @@ typeof b // b 没有声明，但是还会显示 undefined</code></pre></font>
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/18/Typeof/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/21/instanceof/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/06/17/this%E5%85%B3%E9%94%AE%E5%AD%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          this关键字
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/16/%E9%97%AD%E5%8C%85/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">闭包</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -547,427 +367,14 @@ typeof b // b 没有声明，但是还会显示 undefined</code></pre></font>
 
 
 
-
-  
-    <article id="post-垂直水平居中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">CSS水平垂直居中</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/" class="archive-article-date">
-  	<time datetime="2019-03-06T14:33:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-以下为CSS实现元水平垂直居中的几种方法:   
-
-<p>HTML公共代码：</p>
-<pre><code>&lt;div class=&quot;wrapper&quot;&gt;
-   &lt;div class=&quot;box size&quot;&gt;哈哈哈&lt;/div&gt;
-&lt;/div&gt;</code></pre></font>
-        
-          <a class="article-more-a" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/06/%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript-加载时间线" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">JavaScript 加载时间线</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/" class="archive-article-date">
-  	<time datetime="2019-02-10T11:11:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><font size="4">创建Document对象，解析到Web页面，解析HTML元素和文本内容后,添加Element对象和Text节点到文档中，这个阶段document.readyState = ‘loading’。<br></font></li>
-<li>遇到link标签链接外部css样式时，创建线程加载，继续解析。</li>
-<li>遇到script外部链接js,并且没有设置async、defer，浏览器会继续加载，导致阻塞。等待js加载完成并执行该脚本，继续解析文档。</li></ul>
-        
-          <a class="article-more-a" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/10/JavaScript-%E5%8A%A0%E8%BD%BD%E6%97%B6%E9%97%B4%E7%BA%BF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-原型继承和Class继承" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/">原型继承和Class继承</a>
-    </h1>
-  
-
-        
-        <a href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/" class="archive-article-date">
-  	<time datetime="2019-01-19T08:25:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-
-<h2 id="ES5类的创建"><a href="#ES5类的创建" class="headerlink" title="ES5类的创建"></a>ES5类的创建</h2><pre><code>function Animal(name) {
-    this.name = name;
-    this.sleep = function () {
-        console.log(this.name + &apos;正在睡觉&apos;);
-    }
-}
-Animal.prototype.eat = function(food){
-    console.log(this.name+&apos;eat&apos;+food);
-}</code></pre></font>
-        
-          <a class="article-more-a" href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/19/%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF%E5%92%8CClass%E7%BB%A7%E6%89%BF/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-GET-POST" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/25/GET-POST/">GET与POST的区别</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/25/GET-POST/" class="archive-article-date">
-  	<time datetime="2018-12-25T08:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="基于什么前提讨论？"><a href="#基于什么前提讨论？" class="headerlink" title="基于什么前提讨论？"></a>基于什么前提讨论？</h2><font size="4">
-1.不使用任何规范，只考虑语法和理论上的HTTP协议，那么GST和POST几乎无区别，只是名字不一样而已。<br> 
-2.基于RFC规范：  
-
-<blockquote>
-<p>征求意见稿（英语：Request For Comments，缩写为RFC），是由互联网工程任务组（IETF）发布的一系列备忘录。文件收集了有关互联网相关信息，以及UNIX和互联网社群的软件文件，以编号排定。</p>
-</blockquote></font>
-        
-          <a class="article-more-a" href="/2018/12/25/GET-POST/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/HTTP//" class="article-tag-list-link color5">HTTP</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/25/GET-POST/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-border-radius" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/20/border-radius/">border-radius</a>
-    </h1>
-  
-
-        
-        <a href="/2018/12/20/border-radius/" class="archive-article-date">
-  	<time datetime="2018-12-20T11:31:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <font size="4">
-通过border-radius我们能够很轻易画出一个圆：  
-HTML:  
-
-<pre><code>&lt;div class = &apos;demo&apos;&gt;&lt;/div&gt;</code></pre><p>CSS:</p>
-<pre><code>.demo{
-    width:100px;
-    height:100px;
-    background-color:red;
-    border-radius:50px;
-}</code></pre></font>
-        
-          <a class="article-more-a" href="/2018/12/20/border-radius/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/CSS//" class="article-tag-list-link color4">CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/20/border-radius/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -990,8 +397,8 @@ HTML:
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
